@@ -1,0 +1,23 @@
+{
+  "header": {
+    "comment": "eric tasks file for project ericPySide6",
+    "warning": "This file was generated automatically, do not edit.",
+    "saved": "2022-03-03, 14:35:37"
+  },
+  "ProjectScanFilter": "",
+  "Tasks": [
+    {
+      "summary": "TODO: not implemented yet",
+      "description": "",
+      "priority": 1,
+      "lineno": 36,
+      "completed": false,
+      "created": 1646289285.4025612,
+      "type": 1,
+      "uid": "{5e93d31c-8f96-431a-861e-1048d6b5724b}",
+      "parent_uid": "",
+      "expanded": false,
+      "filename": "D:\\zw_own\\PyQt\\my_pyqt_book\\PySide6-codes\\Chapter01\\ericProject\\testFirst.py"
+    }
+  ]
+}

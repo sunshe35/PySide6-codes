@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>608</width>
+    <height>479</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>40</y>
+      <width>491</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>images/python.jpg</pixmap>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>608</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="fileOpenAction"/>
+    <addaction name="fileNewAction"/>
+    <addaction name="fileCloseAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>编辑(&amp;E)</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_E"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="openCalc"/>
+   <addaction name="openNotepad"/>
+   <addaction name="fileOpenAction"/>
+   <addaction name="fileNewAction"/>
+   <addaction name="fileCloseAction"/>
+  </widget>
+  <action name="fileOpenAction">
+   <property name="icon">
+    <iconset resource="apprcc.qrc">
+     <normaloff>:/pic/images/open.jpg</normaloff>:/pic/images/open.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+O</string>
+   </property>
+  </action>
+  <action name="fileNewAction">
+   <property name="icon">
+    <iconset resource="apprcc.qrc">
+     <normaloff>:/pic/images/new.jpg</normaloff>:/pic/images/new.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>新建</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+N</string>
+   </property>
+  </action>
+  <action name="fileCloseAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/close.jpg</normaloff>images/close.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>关闭</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+C</string>
+   </property>
+  </action>
+  <action name="openCalc">
+   <property name="icon">
+    <iconset resource="apprcc.qrc">
+     <normaloff>:/pic/images/calc.jpg</normaloff>:/pic/images/calc.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>计算器</string>
+   </property>
+   <property name="toolTip">
+    <string>打开计算器</string>
+   </property>
+  </action>
+  <action name="openNotepad">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/notepad.jpg</normaloff>images/notepad.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>记事本</string>
+   </property>
+   <property name="toolTip">
+    <string>打开记事本</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="apprcc.qrc"/>
+ </resources>
+ <connections/>
+</ui>

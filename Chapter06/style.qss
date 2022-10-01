@@ -1,0 +1,96 @@
+QMainWindow{
+    background-color: yellow
+}
+
+QToolTip{
+    border: 1px solid rgb(45, 45, 45);
+    background: white;
+    color: red;
+}
+
+
+
+QPushButton#btnID{
+    border-radius: 30px;
+    background-image: url('./images/left.png');
+    }
+
+#btnID:hover{
+    border-radius: 30px;
+    background-image: url('./images/leftHover.png');
+    }
+
+QPushButton#btnID:Pressed{
+    border-radius: 30px;
+    background-image: url('./images/leftPressed.png');
+    }
+
+QPushButton {
+    background-color: red
+}
+
+QPushButton[name="btnProperty"] {
+    background-color: blue
+}
+
+QGroupBox {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #E0E0E0, stop: 1 #FFFFFF);
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-top: 1ex; /* leave space at the top for the title */
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center; /* position at the top center */
+    padding: 0 3px;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FF0ECE, stop: 1 #FFFFFF);
+}
+QGroupBox>QCheckBox{
+    background-color: yellow
+}
+QGroupBox>QPushButton{
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
+    min-width: 80px;
+}
+
+QGroupBox>QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QGroupBox>QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QGroupBox>QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+
+QComboBox {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 6em;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+    background: red;
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    image: url(./images/dropdown.png);
+}
+
