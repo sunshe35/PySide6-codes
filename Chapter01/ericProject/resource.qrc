@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="pic1">
+    <file>images/close.jpg</file>
+    <file>images/new.jpg</file>
+    <file>images/notepad.jpg</file>
+    <file>images/open.jpg</file>
+  </qresource>
+  <qresource prefix="新前缀"/>
+</RCC>
