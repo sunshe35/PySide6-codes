@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'plotly_pyqt.ui'
+## Form generated from reading UI file 'layoutContainer.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.3
 ##
@@ -15,9 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWebEngineWidgets import QWebEngineView
-from PySide6.QtWidgets import (QApplication, QMainWindow, QMenuBar, QSizePolicy,
-    QStatusBar, QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
+    QLineEdit, QMainWindow, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -26,11 +26,28 @@ class Ui_MainWindow(object):
         MainWindow.resize(800, 600)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.qwebengine = QWebEngineView(self.centralwidget)
-        self.qwebengine.setObjectName(u"qwebengine")
-        self.qwebengine.setGeometry(QRect(0, 10, 451, 321))
-        self.qwebengine.setAutoFillBackground(False)
-        self.qwebengine.setStyleSheet(u"background-color: rgb(170, 170, 127);")
+        self.frame = QFrame(self.centralwidget)
+        self.frame.setObjectName(u"frame")
+        self.frame.setGeometry(QRect(70, 40, 264, 43))
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout = QHBoxLayout(self.frame)
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.label = QLabel(self.frame)
+        self.label.setObjectName(u"label")
+
+        self.horizontalLayout.addWidget(self.label)
+
+        self.lineEdit = QLineEdit(self.frame)
+        self.lineEdit.setObjectName(u"lineEdit")
+
+        self.horizontalLayout.addWidget(self.lineEdit)
+
+        self.pushButton = QPushButton(self.frame)
+        self.pushButton.setObjectName(u"pushButton")
+
+        self.horizontalLayout.addWidget(self.pushButton)
+
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -47,5 +64,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"\u59d3\u540d", None))
+        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\u786e\u5b9a", None))
     # retranslateUi
 
