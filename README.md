@@ -3,13 +3,13 @@
 该项目是《PySide6/PyQt6快速开发与实战》源代码。
 本人是书籍的作者，以下是本书的内容：
 
-**本书提供了PySide6和PyQt6两套源代码**，这两套源代码在gitee或github都可以查到. **源代码在gitee和github上会同步更新，国内用户访问gitee速度更快一些**。
-github传送门：
-[PySide6-codes](https://github.com/sunshe35/PySide6-codes)
-[PyQt6-codes](https://github.com/sunshe35/PyQt6-codes)
-gitee传送门：
-[PySide6-codes](https://gitee.com/sunshe35/PySide6-codes)
-[PyQt6-codes](https://gitee.com/sunshe35/PyQt6-codes)
+**本书提供了PySide6和PyQt6两套源代码**，这两套源代码在gitee或github都可以查到. **源代码在gitee和github上会同步更新，国内用户访问gitee速度更快一些**。  
+github传送门：  
+[PySide6-codes](https://github.com/sunshe35/PySide6-codes)  
+[PyQt6-codes](https://github.com/sunshe35/PyQt6-codes)  
+gitee传送门：  
+[PySide6-codes](https://gitee.com/sunshe35/PySide6-codes)  
+[PyQt6-codes](https://gitee.com/sunshe35/PyQt6-codes)  
 
 ## 本书结构
 
