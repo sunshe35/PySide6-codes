@@ -5,7 +5,8 @@ from PySide6.QtGui import (QAction, QFont, QIcon, QKeySequence,
 from PySide6.QtPrintSupport import QPrintDialog, QPrinter
 from PySide6.QtWidgets import (QApplication, QDialog, QDockWidget,
                                QFileDialog, QListWidget, QMainWindow, QMessageBox, QTextEdit)
-
+import os
+os.chdir(os.path.dirname(__file__))
 
 class MainWindow(QMainWindow):
     def __init__(self):

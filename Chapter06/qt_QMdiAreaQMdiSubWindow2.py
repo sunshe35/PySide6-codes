@@ -7,7 +7,8 @@ from PySide6.QtCore import (QByteArray, QFile, QFileInfo, QPoint, QSettings,
 from PySide6.QtGui import QAction, QIcon, QKeySequence
 from PySide6.QtWidgets import (QApplication, QFileDialog, QMainWindow,
         QMdiArea, QMessageBox, QTextEdit, QWidget)
-
+import os
+os.chdir(os.path.dirname(__file__))
 # import mdi_rc
 
 

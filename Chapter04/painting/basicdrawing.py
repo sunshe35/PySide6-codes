@@ -47,7 +47,8 @@ from PySide6.QtGui import (QBrush, QConicalGradient, QLinearGradient, QPainter,
         QPainterPath, QPalette, QPen, QPixmap, QPolygon, QRadialGradient)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QGridLayout,
         QLabel, QSpinBox, QWidget)
-
+import os
+os.chdir(os.path.dirname(__file__))
 # import basicdrawing_rc
 
 

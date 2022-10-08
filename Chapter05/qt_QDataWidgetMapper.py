@@ -3,7 +3,8 @@ from PySide6.QtGui import *
 from PySide6.QtCore import *
 from PySide6.QtSql import QSqlDatabase, QSqlRelationalTableModel, QSqlRelation, QSqlRelationalDelegate
 import sys
-
+import os
+os.chdir(os.path.dirname(__file__))
 
 class DataWidgetMapperDemo(QMainWindow):
 

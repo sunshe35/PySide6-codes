@@ -5,6 +5,8 @@ from PySide6.QtWidgets import *
 from PySide6.QtGui import *
 from PySide6.QtCore import *
 from PySide6.QtSql import QSqlDatabase, QSqlQueryModel, QSqlQuery
+import os
+os.chdir(os.path.dirname(__file__))
 
 ID, NAME, SUBJECT, SEX, AGE, SCORE, DESCRIBE = range(7)
 
@@ -241,6 +243,7 @@ class SqlQueryModelDemo(QWidget):
 
 
 if __name__ == '__main__':
+
     app = QApplication(sys.argv)
 
     # 打开数据库，该库由qt_createSql.py脚本创建。

@@ -3,6 +3,8 @@ from PySide6.QtGui import *
 from PySide6.QtCore import *
 import sys
 import random
+import os
+os.chdir(os.path.dirname(__file__))
 
 SUBJECT, NAME, SCORE, DESCRIPTION = range(4)
 

@@ -6,6 +6,8 @@ import sys
 import datetime
 
 from qt_QTableModel import StudentTableModel
+import os
+os.chdir(os.path.dirname(__file__))
 
 SUBJECT, NAME, SCORE, DESCRIPTION = range(4)
 

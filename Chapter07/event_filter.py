@@ -3,7 +3,8 @@ from PySide6.QtGui import *
 from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 import sys
-
+import os
+os.chdir(os.path.dirname(__file__))
 
 class EventFilter(QDialog):
     def __init__(self, parent=None):

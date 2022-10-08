@@ -7,7 +7,8 @@ from PySide6.QtWidgets import (QApplication, QLineEdit,
                                QMainWindow, QPushButton, QToolBar, QToolButton, QMessageBox)
 from PySide6.QtWebEngineCore import QWebEnginePage
 from PySide6.QtWebEngineWidgets import QWebEngineView
-
+import os
+os.chdir(os.path.dirname(__file__))
 
 class WebEngineView(QWebEngineView):
     windowList = []  # 创建一个容器存储每个窗口，不然会崩溃，因为是createwindow函数里面的临时变量
