@@ -9,7 +9,8 @@ from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 import sys
 from PySide6.QtWebEngineWidgets import QWebEngineView
-
+import os
+os.chdir(os.path.dirname(__file__))
 
 class Window(QWidget):
     def __init__(self):

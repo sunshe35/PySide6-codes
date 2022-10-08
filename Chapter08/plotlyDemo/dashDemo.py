@@ -10,7 +10,8 @@ import plotly.offline as pyof
 import plotly.graph_objs as go
 import pandas as pd
 from PySide6.QtWebEngineWidgets import QWebEngineView
-
+import os
+os.chdir(os.path.dirname(__file__))
 
 class WorkThread(QThread):
     port = 8800
