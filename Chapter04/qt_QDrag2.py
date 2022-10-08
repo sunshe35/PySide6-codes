@@ -9,6 +9,8 @@ from PySide6.QtGui import *
 from PySide6.QtCore import *
 import PySide6
 import sys
+import os
+os.chdir(os.path.dirname(__file__))
 
 class DragWidget(QWidget):
     def __init__(self):

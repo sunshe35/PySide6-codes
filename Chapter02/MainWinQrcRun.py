@@ -5,8 +5,7 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QFileDialog
 from MainWinQrc import Ui_MainWindow
 from PySide6.QtCore import QCoreApplication
 import os
-
-
+os.chdir(os.path.dirname(__file__))
 class MainForm(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(MainForm, self).__init__()

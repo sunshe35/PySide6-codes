@@ -8,6 +8,8 @@
 
 import os
 import os.path
+import os
+os.chdir(os.path.dirname(__file__))
 
 # UI文件所在的路径 
 dir = './'

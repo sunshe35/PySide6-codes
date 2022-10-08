@@ -8,7 +8,8 @@ import sys
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
 from PySide6.QtCore import *
-
+import os
+os.chdir(os.path.dirname(__file__))
 
 class FontComboBoxDemo(QMainWindow):
     def __init__(self, *args, **kwargs):

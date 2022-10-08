@@ -14,7 +14,8 @@ import os
 import plotly.offline as pyof
 import plotly.graph_objs as go
 from plotly import figure_factory as ff
-
+import os
+os.chdir(os.path.dirname(__file__))
 
 class Plotly_Qt():
     def __init__(self):

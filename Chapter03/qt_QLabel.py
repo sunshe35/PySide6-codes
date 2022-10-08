@@ -11,7 +11,8 @@ from PySide6.QtWidgets import QApplication, QLabel, QWidget, QVBoxLayout
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap, QPalette
 import sys
-
+import os
+os.chdir(os.path.dirname(__file__))
 
 class WindowDemo(QWidget):
     def __init__(self):

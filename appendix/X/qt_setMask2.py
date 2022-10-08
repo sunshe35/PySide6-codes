@@ -11,7 +11,8 @@ import sys
 from PySide6.QtWidgets import QApplication, QWidget
 from PySide6.QtGui import QPixmap, QPainter, QCursor,QMouseEvent,QPaintEvent
 from PySide6.QtCore import Qt, QTimer
-
+import os
+os.chdir(os.path.dirname(__file__))
 
 class ShapeWidget(QWidget):
     def __init__(self, parent=None):

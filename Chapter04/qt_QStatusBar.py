@@ -12,6 +12,8 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 import time
+import os
+os.chdir(os.path.dirname(__file__))
 
 class StatusDemo(QMainWindow):
     def __init__(self, parent=None):

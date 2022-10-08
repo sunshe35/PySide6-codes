@@ -11,7 +11,8 @@ from PySide6.QtCore import QMimeData
 from PySide6.QtWidgets import (QApplication,QWidget, QDialog, QGridLayout, QLabel, QPushButton, QTextEdit)
 from PySide6.QtGui import QPixmap, QClipboard
 from PySide6.QtGui import Qt
-
+import os
+os.chdir(os.path.dirname(__file__))
 
 class Demo(QWidget):
     def __init__(self, parent=None):
