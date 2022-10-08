@@ -1,8 +1,9 @@
+import os
 from quant.rhQuant import *
 import copy
 pd.set_option('display.max_columns', 20)
 pd.set_option('display.width', 150)
-
+os.chdir(os.path.dirname(__file__))
 
 class StrategyDemo(RhQuant):
     """

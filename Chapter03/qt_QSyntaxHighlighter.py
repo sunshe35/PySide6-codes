@@ -229,7 +229,9 @@ class MainWindow(QMainWindow):
         # Load syntax into the editor for demo purposes
         highlighter = PythonHighlighter(self.editor.document())
 
-        with open('qt_QLabel2.py', encoding='utf8') as file:
+        import os
+        _path = os.path.dirname(__file__)+os.sep+'qt_QLabel2.py'
+        with open(_path, encoding='utf8') as file:
             self.editor.setPlainText(file.read())
 
 

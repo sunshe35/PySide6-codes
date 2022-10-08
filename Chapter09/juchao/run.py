@@ -20,7 +20,8 @@ import re
 
 import threading
 import copy
-
+import os
+os.chdir(os.path.dirname(__file__))
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     """

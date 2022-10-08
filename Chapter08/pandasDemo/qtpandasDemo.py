@@ -2,7 +2,8 @@ from PySide6.QtWidgets import *
 import sys
 from qtpandas.models.DataFrameModel import DataFrameModel
 from qtpandas.views.DataTableView import DataTableWidget
-
+import os
+os.chdir(os.path.dirname(__file__))
 import pandas as pd
 
 class qtpandasDemo(QMainWindow):

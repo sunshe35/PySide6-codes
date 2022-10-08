@@ -383,6 +383,8 @@ class MainWindow(QMainWindow):
 
 
 if __name__ == '__main__':
+    import os
+    os.chdir(os.path.dirname(__file__))
     app = QApplication(sys.argv)
     main_win = create_main_window()
     initial_urls = sys.argv[1:]
