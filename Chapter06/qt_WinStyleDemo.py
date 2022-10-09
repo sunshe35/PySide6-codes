@@ -144,7 +144,7 @@ class WinStyleDemo(QMainWindow):
         self.setStyle(QMainWindow().style())
         self.setStyleSheet('')
         self.setPalette(QMainWindow().palette())
-        self.paintEvent = QMainWindow.paintEvent
+        self.paintEvent = QMainWindow().paintEvent
         self.update()
         self.show()
 
