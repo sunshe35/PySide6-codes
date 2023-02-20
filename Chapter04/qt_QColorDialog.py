@@ -82,9 +82,9 @@ class DialogOptionsWidget(QWidget):
 
     def value(self):
         result = 0
-        for checkbox_tuple in self.checkBoxList:
-            if checkbox_tuple[0].isChecked():
-                result = checkbox_tuple[1]
+        for checkBox_tuple in self.checkBoxList:
+            if checkBox_tuple[0].isChecked():
+                result = result|checkBox_tuple[1]
         return result
 
 
