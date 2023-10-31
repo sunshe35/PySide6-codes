@@ -36,9 +36,10 @@ class lineEditDemo(QWidget):
 
         # 浮点型 范围：[-360, 360] 精度：小数点后2位
         pDoubleValidator = QDoubleValidator(self)
-        pDoubleValidator.setRange(-360, 360)
+        pDoubleValidator.setRange(-360.0, 360.0)
         pDoubleValidator.setNotation(QDoubleValidator.StandardNotation)
         pDoubleValidator.setDecimals(2)
+
 
         # 字符和数字
         reg = QRegularExpression("[a-zA-Z0-9]+$")
@@ -49,8 +50,22 @@ class lineEditDemo(QWidget):
         pIntLineEdit.setValidator(pIntValidator)
         pDoubleLineEdit.setValidator(pDoubleValidator)
         pValidatorLineEdit.setValidator(pValidator)
-
+        
+        # QDoubleValidator无法限制QLineEdit数据输入大小，因此这里手动添加限制。
+        pDoubleLineEdit.textChanged[str].connect(
+            lambda x: self.input_validate(x,pDoubleValidator, pDoubleLineEdit))
+        self.last_text = ''
+        
         self.setLayout(flo)
+        
+        
+        
+    def input_validate(self,text, pDoubleValidator, pDoubleLineEdit):
+        if float(text) > pDoubleValidator.top() or float(text) < pDoubleValidator.bottom():
+            pDoubleLineEdit.setText(self.last_text)
+        else:
+            self.last_text =text
+
 
 
 if __name__ == "__main__":
