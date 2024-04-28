@@ -74,15 +74,15 @@ class QListViewDemo(QWidget):
         self.listView.customContextMenuRequested.connect(self.showMenu)  ####右键菜单
 
         # 列表视图布局
-        self.listView.setResizeMode(self.listView.Adjust)
-        self.listView.setLayoutMode(self.listView.Batched)
-        self.listView.setMovement(self.listView.Snap)
+        self.listView.setResizeMode(self.listView.ResizeMode.Adjust)
+        self.listView.setLayoutMode(self.listView.LayoutMode.Batched)
+        self.listView.setMovement(self.listView.Movement.Snap)
         self.listView.setUniformItemSizes(True)
         self.listView.setGridSize(QSize(10,20))
 
-        self.listView2.setViewMode(self.listView.IconMode)
+        self.listView2.setViewMode(self.listView.ViewMode.IconMode)
         self.listView2.setSpacing(1)
-        self.listView2.setFlow(self.listView2.LeftToRight)
+        self.listView2.setFlow(self.listView2.Flow.LeftToRight)
         self.listView2.setIconSize(QSize(2,3))
 
 

@@ -93,7 +93,7 @@ class filedialogdemo(QWidget):
     def file_MultiFile2(self):
         file_dialog = QFileDialog(self, caption='选择多个文件', directory=os.path.abspath('.'),
                                   filter="All files(*);;Python files(*.py);;Image files (*.jpg *.png);;Image files2(*.ico *.gif)")
-        file_dialog.setFileMode(file_dialog.ExistingFiles)
+        file_dialog.setFileMode(file_dialog.FileMode.ExistingFiles)
         if file_dialog.exec():
             file_path_list = file_dialog.selectedFiles()
             self.label.setText('你选择了如下路径：\n' + ';\n'.join(file_path_list))
