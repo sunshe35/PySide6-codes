@@ -17,6 +17,7 @@ class SqlQueryModelDemo(QWidget):
         super().__init__()
         self.setWindowTitle("分页查询案例-只读")
         self.resize(750, 300)
+        
 
         # 创建窗口
         self.createWindow()
@@ -88,6 +89,8 @@ class SqlQueryModelDemo(QWidget):
         mainLayout.addWidget(self.tableView)
         mainLayout.addLayout(statusLayout)
         self.setLayout(mainLayout)
+        
+        
 
     # 设置表格
     def setTableView(self):
@@ -132,6 +135,9 @@ class SqlQueryModelDemo(QWidget):
     # 设置上下文菜单
     def generateMenu(self):
         menu = QMenu(self)
+        # menu = QMenu(self.tableView)
+        self.tableView.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
+        # menu.setShortcutEnabled(True)
         menu.addAction(QIcon("images/up.png"), '第一页', self.onFirstButtonClick, QKeySequence(Qt.CTRL | Qt.Key_F))
         menu.addAction(QIcon("images/left.png"), '前一页', self.onPrevButtonClick, QKeySequence(Qt.CTRL | Qt.Key_P))
         menu.addAction(QIcon("images/right.png"), '后一页', self.onNextButtonClick, QKeySequence(Qt.CTRL | Qt.Key_N))
@@ -142,6 +148,8 @@ class SqlQueryModelDemo(QWidget):
                        QKeySequence(Qt.CTRL | Qt.Key_R))
         menu.addAction('选择列', lambda: self.tableView.selectColumn(self.tableView.currentIndex().column()),
                        QKeySequence(Qt.CTRL | Qt.SHIFT | Qt.Key_R))
+        for action in menu.actions():
+            action.setShortcutContext(Qt.ShortcutContext.WidgetWithChildrenShortcut)
         return menu
 
     def showMenu(self, pos):
