@@ -23,7 +23,7 @@ class InputdialogDemo(QWidget):
         layout.addRow(self.btn1, self.le1)
 
         self.btn2 = QPushButton("获得字符串")
-        self.btn2.clicked.connect(self.getIext)
+        self.btn2.clicked.connect(self.getText)
         self.le2 = QLineEdit()
         layout.addRow(self.btn2, self.le2)
 
@@ -52,7 +52,7 @@ class InputdialogDemo(QWidget):
         if ok and item:
             self.le1.setText(item)
 
-    def getIext(self):
+    def getText(self):
         text, ok = QInputDialog.getText(self, 'Text Input Dialog', '输入姓名:')
         if ok:
             self.le2.setText(str(text))

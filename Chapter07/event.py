@@ -1,7 +1,7 @@
 import sys
 from PySide6.QtCore import (QEvent, QTimer, Qt)
 from PySide6.QtWidgets import (QApplication, QMenu, QWidget)
-from PySide6.QtGui import QPainter
+from PySide6.QtGui import QPainter,QContextMenuEvent
 
 
 class Widget(QWidget):
@@ -35,7 +35,8 @@ class Widget(QWidget):
             menu.addSeparator()
             threeAction = menu.addAction("Thre&e")
             threeAction.triggered.connect(self.three)
-        menu.exec(event.globalPos())
+        if isinstance(event,QContextMenuEvent): # 过滤其他事件，否则会报错
+            menu.exec(event.globalPos())
 
     # 上下文菜单槽函数
     def one(self):
@@ -74,7 +75,7 @@ class Widget(QWidget):
     # 重新实现调整窗口大小事件
     def resizeEvent(self, event):
         self.text = "调整窗口大小为： QSize({0}, {1})".format(
-            event.size().width(), event.size().height())
+            self.size().width(), self.size().height())
         self.update()
 
     # 重新实现鼠标释放事件

@@ -266,7 +266,8 @@ class RhQuant:
         '''数据预处理'''
         # 把 date 数据列格式统一修改为 Timestamp
         if self.df_data.dtypes[self.col_date] != '<M8[ns]':
-            self.df_data[self.col_date] = self.df_data[self.col_date].astype(np.datetime64)
+            # self.df_data[self.col_date] = self.df_data[self.col_date].astype(np.datetime64)
+            self.df_data[self.col_date] = self.df_data[self.col_date].astype('datetime64[ns]')
         self.df_data = self.df_data.groupby(self.col_code).apply(self.data_pre)
 
         '''设置以code为索引的数据源'''
