@@ -51,11 +51,11 @@ class CheckBoxDemo(QWidget):
 
     def button_click(self, btn):
         chk1Status = self.checkBox1.text() + ", isChecked=" + str(self.checkBox1.isChecked()) + ', chekState=' + str(
-            self.checkBox1.checkState().name.decode('utf8')) + "\n"
+            self.checkBox1.checkState().name.encode('utf8')) + "\n"
         chk2Status = self.checkBox2.text() + ", isChecked=" + str(self.checkBox2.isChecked()) + ', checkState=' + str(
-            self.checkBox2.checkState().name.decode('utf8')) + "\n"
+            self.checkBox2.checkState().name.encode('utf8')) + "\n"
         chk3Status = self.checkBox3.text() + ", isChecked=" + str(self.checkBox3.isChecked()) + ', checkState=' + str(
-            self.checkBox3.checkState().name.decode('utf8')) + "\n"
+            self.checkBox3.checkState().name.encode('utf8')) + "\n"
         click = '你点击了' + btn.text()
         self.textEdit.setText(chk1Status + chk2Status + chk3Status+click)
 
