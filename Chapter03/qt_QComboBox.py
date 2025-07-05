@@ -57,7 +57,7 @@ class Widget(QWidget):
         self.combobox_edit.setEditable(True)
         for i in range(len(item_list)):
             self.combobox_edit.addItem(icon, item_list[i])
-        self.combobox_edit.setInsertPolicy(self.combobox_edit.InsertAfterCurrent)
+        self.combobox_edit.setInsertPolicy(QComboBox.InsertAfterCurrent)
         self.combobox_edit.setCurrentIndex(-1)
         layout.addRow(QLabel("允许修改1:默认"), self.combobox_edit)
 
