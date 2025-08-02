@@ -12,7 +12,7 @@ class MainForm( QMainWindow , Ui_MainWindow):
 		self.setupUi(self) 
 		# 菜单的点击事件，当点击关闭菜单时连接槽函数 close()     
 		self.fileCloseAction.triggered.connect(self.close)  
-		# 菜单的点击事件，当点击打开菜单时连接槽函数 openMsg()     
+		# 菜单的点击事件，当点击打开菜单时连接槽函数 openFile()     
 		self.fileOpenAction.triggered.connect(self.openFile)
 
 		# 打开计算器
