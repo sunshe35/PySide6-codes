@@ -2,7 +2,7 @@ import sys
 from PySide6.QtWidgets import (QApplication, QWidget,QMainWindow
 , QLineEdit, QTextBrowser, QPushButton, QVBoxLayout, QHBoxLayout,QFrame,QLabel)
 from PySide6.QtCore import QUrl
-import urllib
+import urllib.parse
 import os
 os.chdir(os.path.dirname(__file__))
 class TextBrowser(QMainWindow):
