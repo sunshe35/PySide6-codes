@@ -105,10 +105,10 @@ class DialogDemo(QWidget):
         layout.addWidget(button_Cancel)
 
         button_DoneOK = QPushButton("Done_OK", dialog)
-        button_DoneOK.clicked.connect(lambda: dialog.done(dialog.Accepted))
+        button_DoneOK.clicked.connect(lambda: dialog.done(dialog.DialogCode.Accepted))
         layout.addWidget(button_DoneOK)
         button_DoneCancel = QPushButton("Done_Cancel", dialog)
-        button_DoneCancel.clicked.connect(lambda: dialog.done(dialog.Rejected))
+        button_DoneCancel.clicked.connect(lambda: dialog.done(dialog.DialogCode.Rejected))
         layout.addWidget(button_DoneCancel)
         button_DoneOthers = QPushButton("Done_自定义返回值", dialog)
         button_DoneOthers.clicked.connect(lambda: dialog.done(66))
