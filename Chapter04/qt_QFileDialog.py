@@ -101,7 +101,7 @@ class filedialogdemo(QWidget):
 
     def file_mode_show(self):
         file_dialog = QFileDialog(self, caption='file_mode示例：选择文件夹', directory=os.path.abspath('.'))
-        file_dialog.setFileMode(file_dialog.FileMode.Directory)
+        file_dialog.setFileMode(file_dialog.Directory)
         if file_dialog.exec():
             file_path_list = file_dialog.selectedFiles()
             self.label.setText('你选择了如下路径：\n' + ';\n'.join(file_path_list))
