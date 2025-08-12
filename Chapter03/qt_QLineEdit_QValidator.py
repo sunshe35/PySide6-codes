@@ -61,10 +61,12 @@ class lineEditDemo(QWidget):
         
         
     def input_validate(self,text, pDoubleValidator, pDoubleLineEdit):
-        if float(text) > pDoubleValidator.top() or float(text) < pDoubleValidator.bottom():
+        if text == '':
+            self.last_text = text
+        elif float(text) > pDoubleValidator.top() or float(text) < pDoubleValidator.bottom():
             pDoubleLineEdit.setText(self.last_text)
         else:
-            self.last_text =text
+            self.last_text = text
 
 
 
