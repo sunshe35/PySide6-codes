@@ -14,10 +14,11 @@ class DialogButtonBox(QWidget):
         self.label = QLabel('显示信息')
         layout.addWidget(self.label)
 
-        buttonBox_dialog = self.create_buttonBox()
+        # buttonBox_dialog = self.create_buttonBox()
         button1 = QPushButton("1、嵌入对话框中")
         layout.addWidget(button1)
-        button1.clicked.connect(lambda: self.show_dialog(buttonBox_dialog))
+        # button1.clicked.connect(lambda: self.show_dialog(buttonBox_dialog))
+        button1.clicked.connect(lambda: self.show_dialog(self.create_buttonBox()))
 
         layout.addWidget(QLabel('2、嵌入窗口中：'))
         layout.addWidget(self.create_buttonBox())
