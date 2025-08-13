@@ -25,7 +25,6 @@ class DialogButtonBox(QWidget):
     def show_dialog(self, buttonBox):
         dialog = QDialog(self)
         dialog.setWindowTitle("Dialog + QDialogButtonBox demo")
-        dialog.setWindowModality(Qt.WindowModality.ApplicationModal)
         layout = QVBoxLayout()
         layout.addWidget(QLabel('QDialogButtonBox嵌入到对话框中实例'))
         layout.addWidget(buttonBox)
@@ -35,7 +34,7 @@ class DialogButtonBox(QWidget):
         buttonBox.accepted.connect(dialog.accept)
         buttonBox.rejected.connect(dialog.reject)
         buttonBox.setOrientation(Qt.Vertical)  # 垂直排列
-        dialog.show()
+        dialog.exec_()
 
     def create_buttonBox(self):
         buttonBox = QDialogButtonBox()
