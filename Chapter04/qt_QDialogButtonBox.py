@@ -41,9 +41,9 @@ class DialogButtonBox(QWidget):
         buttonBox.setStandardButtons(
             QDialogButtonBox.Cancel | QDialogButtonBox.Ok | QDialogButtonBox.Reset | QDialogButtonBox.Help | QDialogButtonBox.Yes | QDialogButtonBox.No | QDialogButtonBox.Apply)
         # 自定义按钮
-        buttonBox.addButton(QPushButton('MyOk-ApplyRole'), buttonBox.ApplyRole)
-        buttonBox.addButton(QPushButton('MyOk-AcceptRole'), buttonBox.AcceptRole)
-        buttonBox.addButton(QPushButton('MyNo-AcceptRole'), buttonBox.RejectRole)
+        buttonBox.addButton(QPushButton('MyOk-ApplyRole'), buttonBox.ButtonRole.ApplyRole)
+        buttonBox.addButton(QPushButton('MyOk-AcceptRole'), buttonBox.ButtonRole.AcceptRole)
+        buttonBox.addButton(QPushButton('MyNo-AcceptRole'), buttonBox.ButtonRole.RejectRole)
         # 绑定信号与槽
         buttonBox.accepted.connect(lambda: self.label.setText(self.label.text() + '\n触发了accepted'))
         buttonBox.rejected.connect(lambda: self.label.setText(self.label.text() + '\n触发了rejected'))
